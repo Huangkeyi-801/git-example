@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ning256的自我介绍</title>
+    <style>
+        /* 全局基础样式 */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 { margin-bottom: 10px; }
+        h2 { margin-top: 30px; color: #333; }
+        p { margin-bottom: 15px; }
+        
+        /* 按钮样式 */
+        #theme-toggle {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* 浅色主题（默认） */
+        body.light { background-color: #ffffff; color: #222222; }
+        body.light h2 { color: #111111; }
+        body.light #theme-toggle { background-color: #333; color: #fff; }
+
+        /* 深色主题 */
+        body.dark { background-color: #1e1e1e; color: #dddddd; }
+        body.dark h2 { color: #ffffff; }
+        body.dark #theme-toggle { background-color: #f0f0f0; color: #111; }
+    </style>
+</head>
+<body class="light">
+
+    <button id="theme-toggle" onclick="toggleTheme()">切换深色/浅色主题</button>
+
+    <h1>你好，我是 ning256</h1>
+    <p>这里是我的自我介绍文档。</p >
+
+    <h2>个人方向</h2>
+    <p>我正在积极探索计算机技术领域。</p >
+
+    <h2>目标</h2>
+    <p>1. 熟练掌握 Git 的版本控制流程</p >
+    <p>2. 参与开源项目，积累协作经验</p >
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('light')) {
+                body.classList.remove('light');
+                body.classList.add('dark');
+            } else {
+                body.classList.remove('dark');
+                body.classList.add('light');
+            }
+        }
+    </script>
+</body>
+</html>
